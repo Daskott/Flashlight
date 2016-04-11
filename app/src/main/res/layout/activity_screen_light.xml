@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.daskott.flashlight.ScreenLightActivity"
+    android:background="#FAFAFA">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <ImageButton
+        android:background="@mipmap/on_screen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggle_flash_button"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+
+    <com.andexert.library.RippleView
+        android:id="@+id/flashRipple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ripple:rv_color="@color/custom_lightgrey"
+        ripple:rv_rippleDuration="95"
+        ripple:rv_alpha="150"
+        android:layout_below="@+id/toggle_flash_button"
+        android:layout_toLeftOf="@+id/toggle_flash_button"
+        android:layout_toStartOf="@+id/toggle_flash_button"
+        android:layout_marginTop="48dp"
+        ripple:rv_centered="true">
+
+    </com.andexert.library.RippleView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggle_flashmode"
+        android:src="@mipmap/screen_flashmode"
+        android:layout_alignTop="@+id/flashRipple"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

@@ -1,0 +1,34 @@
+<resources>
+
+    <style name="AppTheme" parent="@style/MyMaterialTheme.Base">
+        <!-- Customize-->
+    </style>
+
+    <style name="ScreenLightTheme" parent="@style/MyMaterialGrey.Base">
+        <!-- Customize-->
+    </style>
+
+
+    <!-- Material Design-->
+    <style name="MyMaterialTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/custom_lightred</item>
+        <item name="colorPrimaryDark">@color/custom_darkred</item>
+        <item name="colorAccent">@color/custom_lightred</item>
+
+    </style>
+
+    <style name="MyMaterialGrey.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/custom_lightgrey</item>
+        <item name="colorPrimaryDark">@color/custom_darkgrey</item>
+        <item name="colorAccent">@color/custom_lightgrey</item>
+
+    </style>
+
+</resources>
+

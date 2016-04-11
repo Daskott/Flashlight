@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/background"
+    android:background="@color/background_material_dark">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <ImageButton
+        android:background="@drawable/power_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggle_flash_button"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <com.andexert.library.RippleView
+        android:id="@+id/soundRipple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="35dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/toggle_flash_button"
+        ripple:rv_color="@color/custom_darkred"
+        ripple:rv_rippleDuration="95"
+        ripple:rv_alpha="150"
+        ripple:rv_centered="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/toggle_silent_button"
+            android:src="@mipmap/off_sound"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+    </com.andexert.library.RippleView>
+
+    <com.andexert.library.RippleView
+        android:id="@+id/flashRipple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ripple:rv_color="@color/custom_darkred"
+        ripple:rv_rippleDuration="95"
+        ripple:rv_alpha="150"
+        android:layout_below="@+id/toggle_flash_button"
+        android:layout_toLeftOf="@+id/toggle_flash_button"
+        android:layout_toStartOf="@+id/toggle_flash_button"
+        android:layout_marginTop="48dp"
+        ripple:rv_centered="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/toggle_flashmode"
+            android:src="@mipmap/off_flashmode"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+    </com.andexert.library.RippleView>
+
+    <com.andexert.library.RippleView
+        android:id="@+id/screenModeRipple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ripple:rv_color="@color/custom_darkred"
+        ripple:rv_rippleDuration="95"
+        ripple:rv_alpha="150"
+
+        android:layout_alignTop="@+id/flashRipple"
+        android:layout_toRightOf="@+id/toggle_flash_button"
+        android:layout_toEndOf="@+id/toggle_flash_button"
+        ripple:rv_centered="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/toggle_screenmode"
+            android:src="@mipmap/off_screen_light"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+
+    </com.andexert.library.RippleView>
+
+    <com.andexert.library.RippleView
+        android:id="@+id/shakeModeRipple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ripple:rv_color="@color/custom_darkred"
+        ripple:rv_rippleDuration="95"
+        ripple:rv_alpha="150"
+
+        android:layout_alignTop="@+id/screenModeRipple"
+        android:layout_alignLeft="@+id/soundRipple"
+        android:layout_alignStart="@+id/soundRipple"
+
+        ripple:rv_centered="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/toggle_shakemode"
+            android:src="@mipmap/off_shake"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+
+    </com.andexert.library.RippleView>
+
+</RelativeLayout>

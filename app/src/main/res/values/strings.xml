@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">FlashLight</string>
+
+    <string name="screen_mode_text">ScreenLight</string>
+    <string name="flash_mode_text">FlashLight</string>
+    <string name="default_text">Tap Center/Shake</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_refresh_screen">RefreshScreen</string>
+    <string name="title_activity_screen_light">ScreenLight</string>
+    <string name="title_activity_sos">SosActivity</string>
+</resources>
